@@ -41,7 +41,8 @@
         <?php
             $myArray = array_keys($posts);
             for ($i = 0; $i < count($myArray); $i++) { 
-                echo '<h2>' . $myArray[$i] . '<h2>';
+                $item = $myArray[$i];
+                echo '<h2>' . $item . '<h2>';
             };
         ?>
     </div>

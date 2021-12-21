@@ -23,8 +23,8 @@
 
             while (count($arrayNumber) < $nItems) {
                 $rnd = rand($min, $max);
-                if (in_array($rnd, $arrayNumber)) {
-                    $arrayNumber[] = $rnd;
+                if (!in_array($rnd, $arrayNumber)) {
+                    $arrayNumber []= $rnd;
                 }
             }
             return $arrayNumber;
@@ -35,6 +35,7 @@
             for ($i=0; $i < count($arrayNumber) ; $i++) { 
                 echo '<h2>' . $arrayNumber[$i] . '<h2>';
             }
+           echo var_dump($arrayNumber)
         ?>
     </div>
 </body>
